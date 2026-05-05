@@ -1,110 +1,119 @@
-#  Student Score Prediction using Simple Linear Regression
+#  Simple Linear Regression Project
 
-##  Project Overview
+##  Introduction
 
-This project explores the relationship between **study hours and student performance**.
-Using a custom-built dataset, a **Simple Linear Regression model** is developed to predict student marks based on the number of hours studied.
-
----
-
-##  Project Objective
-
-The main goal is to verify the assumption that **more study hours lead to higher marks**.
-
-The project follows a complete data science workflow:
-
-* **Data Creation:** Building a custom dataset for uniqueness
-* **Exploratory Data Analysis (EDA):** Understanding patterns and relationships
-* **Model Building:** Training a Linear Regression model using Scikit-learn
-* **Evaluation:** Measuring performance using MAE, MSE, and R² score
+This project demonstrates **Simple Linear Regression** using Python.
+The objective is to analyze and predict student performance (**Scores**) based on study hours (**Hours**) using a custom dataset.
 
 ---
 
-## The Dataset
+##  Problem Statement
 
-The dataset is manually created and slightly modified to meet academic requirements.
-
-* **Feature (X):** Hours Studied
-* **Target (Y):** Scores (Marks)
-* **Size:** Multiple records representing student performance
-
-### Key Finding from EDA
-
-* Strong **positive correlation** between study hours and scores
-* Data follows a **linear trend**, making it suitable for regression
+To build a predictive model that estimates student marks based on the number of hours studied and to understand the relationship between these two variables.
 
 ---
 
-## ⚙️ Tech Stack
+##  Dataset
 
-* **Language:** Python
-* **Libraries Used:**
+* File: `score_updated.csv`
+* Type: Custom dataset (created/modified for uniqueness)
 
-  * Pandas → Data handling
-  * NumPy → Numerical operations
-  * Matplotlib → Visualization
-  * Scikit-learn → Model training & evaluation
+### Features:
+
+* **Hours** → Number of hours studied (Independent Variable)
+* **Scores** → Marks obtained (Dependent Variable)
+
+✔ Dataset has been prepared as per academic requirements to ensure originality.
 
 ---
 
-## 🤖 Model Building
+##  Exploratory Data Analysis (EDA)
 
-A **Simple Linear Regression model** is trained using 80% of the data and tested on 20%.
+Performed initial analysis to understand the dataset:
 
-The model follows the equation:
+* Checked dataset shape, columns, and data types
+* Verified missing values and duplicates
+* Generated statistical summary
+* Visualized data using:
+
+  * Scatter plot
+  * Histogram
+  * Boxplot
+* Checked correlation between variables
+
+###  Key Insights:
+
+* No missing values found
+* No duplicate records
+* Strong positive correlation between Hours and Scores
+* Data shows a linear trend suitable for regression
+
+---
+
+##  Methodology
+
+The project uses the linear regression equation:
 
 y = mx + c
 
 Where:
 
-* **m** = slope (increase in marks per hour studied)
-* **c** = intercept
+* **m (slope)** → rate of change of scores with respect to hours
+* **c (intercept)** → predicted score when hours = 0
 
 ---
 
-##  Model Performance
+##  Implementation Steps
 
-###  Evaluation Metrics:
-
-* **R² Score:** Indicates how well the model explains the data
-* **MAE (Mean Absolute Error):** Average prediction error
-* **MSE (Mean Squared Error):** Squared error measure
-
-✔ The model shows a strong linear relationship and good prediction accuracy
-
----
-
-##  Visualizations
-
-The project includes:
-
-*  **Histogram** → Distribution of hours and scores
-* **Scatter Plot** → Relationship between study hours and marks
-   **Regression Line Plot** → Model fit visualization
-* **Boxplot** → Outlier detection
+1. Import libraries
+2. Load dataset
+3. Perform EDA
+4. Split data into training and testing sets
+5. Train model using `LinearRegression`
+6. Make predictions
+7. Visualize regression line
+8. Evaluate model performance
 
 ---
 
-##  How to Run
+##  Model Evaluation
 
-```bash
-git clone https://github.com/your-username/simple-linear-regression-project.git
-cd simple-linear-regression-project
-pip install pandas numpy matplotlib scikit-learn
-```
+The model is evaluated using:
 
-Run the notebook:
+* **MAE (Mean Absolute Error)**
+* **MSE (Mean Squared Error)**
+* **R² Score (Coefficient of Determination)**
 
-```bash
-jupyter notebook regression.ipynb
-```
+✔ R² score indicates how well the model fits the data.
 
+---
+
+##  Results
+
+* A regression line is fitted to the dataset
+* The model shows a **strong positive relationship** between study hours and scores
+* Predictions are reasonably accurate
+
+---
+
+##  Visualization
+
+* Scatter plot of actual data points
+* Regression line showing predicted values
 
 
 ##  Conclusion
 
-The model successfully demonstrates that:
+* Simple Linear Regression effectively models the relationship between study hours and scores
+* As study hours increase, marks tend to increase
+* The model can be used for basic predictive analysis
 
-* There is a **strong positive relationship** between study hours and marks
-* As study hours increase, scores also increase
-* The model can be used for **basic academic performance prediction
+---
+
+##  Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Scikit-learn
